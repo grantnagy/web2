@@ -3,4 +3,4 @@
 ### Grant Nagy
 ### Fall-2020
 
-# [Live Website Link](https://github.com/grantnagy/AdvJS-gnagy/tree/master/project2)
+# [Live Website Link](https://grantnagy.github.io/webdesign2/)
