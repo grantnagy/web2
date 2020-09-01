@@ -4,20 +4,40 @@
       <script> 
          function dis(val) 
          { 
-             document.getElementById("result").value+=val 
+             document.getElementById("result").value+=val; 
          } 
            
          function solve() 
          { 
-             let x = document.getElementById("result").value 
-             let y = eval(x) 
-             document.getElementById("result").value = y 
-         } 
-           
+             let x = document.getElementById("result").value; 
+             let y = eval(x); 
+             document.getElementById("result").value = y; 
+         }
          function clr() 
          { 
-             document.getElementById("result").value = "" 
+             document.getElementById("result").value = ""; 
          } 
+         function square() 
+         { 
+             let x = document.getElementById("result").value; 
+             let y = eval(x);
+             let z = Math.pow(y,2); 
+             document.getElementById("result").value = z; 
+         }
+         function squareroot() 
+         { 
+             let x = document.getElementById("result").value; 
+             let y = eval(x);
+             let z = Math.sqrt(y,2); 
+             document.getElementById("result").value = z; 
+         }
+         function per() 
+         { 
+             let x = document.getElementById("result").value; 
+             let y = eval(x);
+             let z = (y/100);
+             document.getElementById("result").value = z; 
+         }
       </script> 
    </head> 
    <link href="styles.css" rel="stylesheet">
@@ -54,7 +74,10 @@
             <td><input type="button" class="btn btn-dark" value="=" onclick="solve()"/> </td> 
          </tr>
          <tr>
-          <td colspan="4"><input type="button" value="Clear" onclick="clr()" class="btn btn-dark"/></td>
+          <td><input type="button" value="Clear" onclick="clr()" class="btn btn-dark"/></td>
+          <td><input type="button" class="btn btn-dark" value="%" onclick="per()"/> </td>
+          <td><input type="button" class="btn btn-dark" value="x²" onclick="square()"/> </td>
+          <td><input type="button" class="btn btn-dark" value="√x" onclick="squareroot()"/> </td> 
          </tr> 
       </table> 
    </body>
