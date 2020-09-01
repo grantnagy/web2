@@ -1,0 +1,13 @@
+table {
+    width: 70px !important;
+}
+input[type=text] {
+    color: white;
+background-color: #32383e;
+	
+}
+@media only screen and (max-width: 600px) {
+    table {
+        width: 70% !important;
+    }
+    }
