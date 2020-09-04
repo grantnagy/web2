@@ -9,20 +9,31 @@
            
          function solve() 
          { 
-             let x = document.getElementById("result").value; 
-             let y = eval(x); 
-             document.getElementById("result").value = y; 
+             let x = document.getElementById("result").value;
+             var nums = x.split(' ');
+
+             for(var i in nums){
+                if(nums[i] == "^") power(nums);
+                else {
+                   let y = eval(x);
+                   document.getElementById("result").value = y;
+                }
+             }
+            
          }
          function clr() 
          { 
              document.getElementById("result").value = ""; 
          } 
-         function square() 
-         { 
-             let x = document.getElementById("result").value; 
-             let y = eval(x);
-             let z = Math.pow(y,2); 
-             document.getElementById("result").value = z; 
+         function power(nums) 
+         {  
+
+             var a = parseInt(nums[0]);
+             console.log(a);
+             var b = parseInt(nums[1]);
+             var c = parseInt(nums[2]);
+             var y = Math.pow(a,c);
+             document.getElementById("result").value = y;
          }
          function squareroot() 
          { 
@@ -76,7 +87,7 @@
          <tr>
           <td><input type="button" value="Clear" onclick="clr()" class="btn btn-dark"/></td>
           <td><input type="button" class="btn btn-dark" value="%" onclick="per()"/> </td>
-          <td><input type="button" class="btn btn-dark" value="x²" onclick="square()"/> </td>
+          <td><input type="button" class="btn btn-dark" value="x²" onclick="dis('^')" onclick="square()"/> </td>
           <td><input type="button" class="btn btn-dark" value="√x" onclick="squareroot()"/> </td> 
          </tr> 
       </table> 
