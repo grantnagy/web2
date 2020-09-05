@@ -1,11 +1,14 @@
 table {
     width: 70px !important;
+    text-align: center !important;
 }
 input[type=text] {
     color: white;
 background-color: #32383e;
 }
-
+.bg-secondary {
+    background-color: #1c2024 !important;
+}
 @media only screen and (max-width: 600px) {
     table {
         width: 70% !important;
