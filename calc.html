@@ -3,22 +3,19 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <script> 
                   var memory;
-
          function dis(val) 
          { 
              document.getElementById("result").value+=val; 
          } 
-           
          function solve() 
          { 
              let x = document.getElementById("result").value;
-             
+
                if (x.indexOf("^") != -1) power(x);
                else {
                   let y = eval(x);
                    document.getElementById("result").value = y;
                }
-
          }
          function clr() 
          { 
@@ -65,7 +62,6 @@
                break;
             }
          } 
-
       </script> 
    </head> 
    <link href="styles.css" rel="stylesheet">
