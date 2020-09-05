@@ -2,6 +2,8 @@
    <head> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <script> 
+                  var memory;
+
          function dis(val) 
          { 
              document.getElementById("result").value+=val; 
@@ -10,28 +12,22 @@
          function solve() 
          { 
              let x = document.getElementById("result").value;
-             var nums = x.split(' ');
-
-             for(var i in nums){
-                if(nums[i] == "^") power(nums);
-                else {
-                   let y = eval(x);
+               if (x.indexOf("^") != -1) power(x);
+               else {
+                  let y = eval(x);
                    document.getElementById("result").value = y;
-                }
-             }
-            
+               }
+
          }
          function clr() 
          { 
              document.getElementById("result").value = ""; 
          } 
-         function power(nums) 
+         function power(x) 
          {  
-
-             var a = parseInt(nums[0]);
-             console.log(a);
-             var b = parseInt(nums[1]);
-             var c = parseInt(nums[2]);
+             var nums = x.split('^');
+             var a = nums[0];
+             var c = nums[1];
              var y = Math.pow(a,c);
              document.getElementById("result").value = y;
          }
@@ -49,6 +45,20 @@
              let z = (y/100);
              document.getElementById("result").value = z; 
          }
+        
+         function mem(a) 
+         {
+            switch(a){
+               case '1': memory = "";
+               break;
+               case '2': solve(); 
+                         memory = document.getElementById("result").value;
+               break;
+               case '3': dis(memory);
+               break;
+            }
+         } 
+
       </script> 
    </head> 
    <link href="styles.css" rel="stylesheet">
@@ -87,9 +97,14 @@
          <tr>
           <td><input type="button" value="Clear" onclick="clr()" class="btn btn-dark"/></td>
           <td><input type="button" class="btn btn-dark" value="%" onclick="per()"/> </td>
-          <td><input type="button" class="btn btn-dark" value="x²" onclick="dis('^')" onclick="square()"/> </td>
+          <td><input type="button" class="btn btn-dark" value="xⁿ" onclick="dis('^')" onclick="square()"/> </td>
           <td><input type="button" class="btn btn-dark" value="√x" onclick="squareroot()"/> </td> 
-         </tr> 
+         </tr>
+         <tr>
+            <td><input type="button" value="MC" onclick="mem('1')" class="btn btn-dark"/></td>
+            <td><input type="button" value="MR" onclick="mem('3')" class="btn btn-dark"/></td>
+            <td colspan="2"><input type="button" value="M+" onclick="mem('2')" class="btn btn-dark"/></td>
+           </tr> 
       </table> 
    </body>
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
