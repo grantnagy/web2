@@ -1,16 +1,18 @@
 table {
-    width: 70% !important;
     text-align: center !important;
+    width: 50% !important;
 }
 input[type=text] {
     color: white;
-background-color: #32383e;
+    background-color: #32383e;
+    width: 100%;
 }
 .bg-secondary {
     background-color: #1c2024 !important;
 }
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px) {
     table {
+        text-align: center !important;
         width: 100% !important;
     }
-    }
+}
