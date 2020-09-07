@@ -1,5 +1,5 @@
 table {
-    width: 70px !important;
+    width: 70% !important;
     text-align: center !important;
 }
 input[type=text] {
@@ -11,6 +11,6 @@ background-color: #32383e;
 }
 @media only screen and (max-width: 600px) {
     table {
-        width: 70% !important;
+        width: 100% !important;
     }
     }

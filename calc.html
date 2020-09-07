@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <script> 
                   var memory;
-         function dis(val) 
+         function dis(val) //display
          { 
              document.getElementById("result").value+=val; 
          } 
@@ -17,11 +17,11 @@
                    document.getElementById("result").value = y;
                }
          }
-         function clr() 
+         function clr() //clear 
          { 
              document.getElementById("result").value = ""; 
          }
-         function bs()
+         function bs() //backspace
          {
             let x = document.getElementById("result").value;
             let y = x.substring(0, x.length-1);
@@ -42,7 +42,7 @@
              let z = Math.sqrt(y,2); 
              document.getElementById("result").value = z; 
          }
-         function per() 
+         function per() //percentage
          { 
              let x = document.getElementById("result").value; 
              let y = eval(x);
@@ -50,7 +50,7 @@
              document.getElementById("result").value = z; 
          }
         
-         function mem(a) 
+         function mem(a) //memory functions
          {
             switch(a){
                case '1': memory = "";
