@@ -13,11 +13,17 @@ const displayResults = () => {
 	average = total / scores.length;
 	var highscore = Math.max.apply(null,scores);
 
-	$("#results").innerHTML = "Average score = " + average + '<br/>' + "High Score = " + highscore;
+	$("#results").innerHTML = "<h2>Results</h2>"
+	$("#results").innerHTML += "<p>Average score = " + average + '<br/>' + "High Score = " + highscore + "</p>";
 
 };
 const displayScores = () => {
-	
+	$("#scores").innerHTML = "<h2>Scores</h2>"
+	for (var i in scores)
+	{
+		$("#scores").innerHTML += '<lable>' + names[i] + "</lable>";
+		$("#scores").innerHTML += '<lable>' + scores[i] + "</lable>" + "<br>";
+	}
 }
 
 const addScore = () => {
@@ -55,4 +61,5 @@ document.addEventListener("DOMContentLoaded", () => {
 	$("#add").addEventListener("click", addScore);
 	$("#display_results").addEventListener("click", displayResults);
 	$("#display_scores").addEventListener("click", displayScores);
+	$("#name").focus();
 });

@@ -27,6 +27,8 @@ span {
 #convert {
 	width: 10em;
 }
+#message {color: red;
+            text-align: center;}
 
 /*div that's the 3rd child of its parent element (main) */
 div:nth-child(3) {
